@@ -1,0 +1,4 @@
+vite.config.ts
+svelte.config.js
+tsconfig.json
+src/app.html

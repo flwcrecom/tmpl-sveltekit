@@ -1,0 +1,8 @@
+CRITICAL SvelteKit WebContainer Rules:
+- package.json MUST have "type": "module" — SvelteKit is ESM-only
+- Use vite.config.ts (TypeScript), NOT vite.config.js — @sveltejs/kit/vite is ESM and fails with CJS require()
+- svelte.config.js uses JS (not TS) — this is standard SvelteKit convention
+- ALWAYS use `npm run dev` to start — never use bare `vite` or `svelte-kit dev`
+- All devDependencies are required: @sveltejs/adapter-auto, @sveltejs/kit, @sveltejs/vite-plugin-svelte, svelte, vite
+- Do NOT modify the files listed in .buildra/ignore — they are the scaffolding
+- Svelte 5 uses runes ($state, $derived, $effect) instead of stores
